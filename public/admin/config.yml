@@ -1,7 +1,7 @@
 backend:
   name: github
   # ⚠️ 必须修改：换成你的 GitHub 用户名/仓库名，例如: zhangsan/my-minimalist-blog
-  repo: 你的用户名/你的仓库名
+  repo: carlseag/blog-cf
   branch: main
 
 # 图片保存规则：当你上传图片时，系统会存入 public/assets 文件夹
