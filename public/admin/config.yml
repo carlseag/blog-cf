@@ -1,0 +1,24 @@
+backend:
+  name: github
+  # ⚠️ 必须修改：换成你的 GitHub 用户名/仓库名，例如: zhangsan/my-minimalist-blog
+  repo: 你的用户名/你的仓库名
+  branch: main
+
+# 图片保存规则：当你上传图片时，系统会存入 public/assets 文件夹
+media_folder: "public/assets"
+public_folder: "/assets"
+
+collections:
+  - name: "blog"
+    label: "文章管理"
+    folder: "src/content/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "标题", name: "title", widget: "string"}
+      - {label: "文章描述 (必填)", name: "description", widget: "string"}
+      - {label: "发布时间", name: "pubDatetime", widget: "datetime"}
+      - {label: "隐藏/草稿", name: "draft", widget: "boolean", default: false, required: false}
+      - {label: "置顶推荐", name: "featured", widget: "boolean", default: false, required: false}
+      - {label: "标签", name: "tags", widget: "list", default: ["随笔"]}
+      - {label: "正文内容", name: "body", widget: "markdown"}
