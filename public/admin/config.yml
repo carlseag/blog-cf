@@ -7,9 +7,9 @@ media_folder: "public/assets"
 public_folder: "/assets"
 
 collections:
-  - name: "blog"
+  - name: "posts"
     label: "Blog Posts"
-    folder: "src/content/blog"
+    folder: "src/content/posts"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
